@@ -31,9 +31,9 @@ Fri May 30 06:42:42 AM CDT 2025 -- Generating file list
 Fri May 30 06:42:42 AM CDT 2025 -- Gathering all file md5sums
 Fri May 30 06:43:12 AM CDT 2025 -- Creating unencrypted data bundle
 Fri May 30 06:43:23 AM CDT 2025 -- Checksumming the unencrypted data bundle
-Fri May 30 06:43:41 AM CDT 2025 -- Encrypting and compressing the data bundle
+Fri May 30 06:43:41 AM CDT 2025 -- Compressing and encrypting the data bundle
 Fri May 30 06:48:45 AM CDT 2025 -- Checksumming the encrypted data bundle
-Fri May 30 06:49:00 AM CDT 2025 -- Encrypting the file manifeset
+Fri May 30 06:49:00 AM CDT 2025 -- Compressing and encrypting the file manifeset
 Fri May 30 06:49:00 AM CDT 2025 -- Storing uncrypted manifest locally
 Fri May 30 06:49:01 AM CDT 2025 -- Adding bundle metadata to MariaDB database
 Fri May 30 06:49:01 AM CDT 2025 -- Shipping encrypted data bundle and encrypted manifest to AWS Deep Glacider

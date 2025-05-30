@@ -55,7 +55,7 @@ echo "---" >> ${bundle_build_dir}/${prefix}_manifest.txt
 echo "${real_md5sum} ${prefix}.tar" >> ${bundle_build_dir}/${prefix}_manifest.txt
 
 ## Encrpyt the Bundle
-echo "$(date) -- Encrypting and compressing the data bundle"
+echo "$(date) -- Compressing and encrypting the data bundle"
 gpg --batch --passphrase "${pgp_passphrase}" -c ${bundle_build_dir}/${prefix}.tar
 rc=$?
 if [ ${rc} -ne 0 ]; then
@@ -70,7 +70,7 @@ enc_md5sum=$(md5sum ${bundle_build_dir}/${prefix}.tar.gpg | awk '{print $1}')
 echo "${enc_md5sum} ${prefix}.tar.gpg" >> ${bundle_build_dir}/${prefix}_manifest.txt
 
 ## Encrpyt a copy of the bundle manifest
-echo "$(date) -- Encrypting the file manifeset"
+echo "$(date) -- Compressing and encrypting the file manifeset"
 gpg --batch --passphrase "${pgp_passphrase}" -c ${bundle_build_dir}/${prefix}_manifest.txt
 rc=$?
 if [ ${rc} -ne 0 ]; then
