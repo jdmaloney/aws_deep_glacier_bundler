@@ -18,7 +18,8 @@ Features:
 	- Reduces usage on AWS Deep Glacier to save money
 * Obfuscates file names by uploading bundles that are named with incremental numbers
 	- No paths or sensitive data in the file names for security/privacy reasons
-* Removes write access to directory follow upload to help ensure data that has been uploaded isn't modified later 
+* Removes write access to the archived directory following successful upload
+	- Helps ensure data that has been uploaded isn't modified later 
 * Included .json file can be uploadeed to a Grafana instance connected to your DB so you visualize archive stats
 
 
@@ -29,7 +30,7 @@ Requirements:
 	- ** KEY IS NEEDED TO DECRYPT DATA WHEN RESTORING FROM THESE BACKUPS **
 * Run "aws configure" to setup the awscli with your aws accsess key/secret/region definitions
 * Create a MariaDB/MySQL database (named whatever you'd like, just place in the config)
-	- Populate the DB with a single table named "bundle information" that described below:
+	- Populate the DB with a single table named "bundle information" that is described below:
 
 ```
 MariaDB [aws_backup]> describe bundle_information;
