@@ -31,6 +31,7 @@ Requirements:
 * Create a MariaDB/MySQL database (named whatever you'd like, just place in the config)
 	- Populate the DB with a single table named "bundle information" that described below:
 
+```
 MariaDB [aws_backup]> describe bundle_information;
 +--------------------------------------+--------------+------+-----+---------+-------+
 | Field                                | Type         | Null | Key | Default | Extra |
@@ -49,3 +50,4 @@ MariaDB [aws_backup]> describe bundle_information;
 | bundle_manifest_path                 | varchar(200) | NO   |     | NULL    |       |
 | total_bytes_to_aws                   | bigint(20)   | NO   |     | NULL    |       |
 +--------------------------------------+--------------+------+-----+---------+-------+
+```
