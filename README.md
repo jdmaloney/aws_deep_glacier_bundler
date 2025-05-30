@@ -4,7 +4,7 @@ Author: JD Maloney
 Purpose: Takes a directory path as an argument and does the following
 * Records all files and their md5sums into a manifest file
 * Tar bundles the directory into a single file and records its checksum
-* Uses pgp to encrypt and compress the data bundle and a copy of the manifest
+* Uses gpg to encrypt and compress the data bundle and a copy of the manifest
 * Keeps an unencrypted manifest copy locally
 * Ships the encrypted/compressed data bundle and an encrypted/compressed manifest to AWS Deep Glacier
 * Records all information in the MariaDB database
