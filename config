@@ -1,0 +1,9 @@
+## Variable Definitions
+aws_bucket=
+dbuser=
+dbpassword=
+dbhost=
+dbname=
+bundle_build_dir=
+local_manifest_dir=
+pgp_passphrase=
