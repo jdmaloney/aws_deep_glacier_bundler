@@ -1,7 +1,5 @@
 #!/bin/bash
 
-## Commands needed: md5sum tar find gpg cp aws mysql
-
 ## Load configuration
 source ./config
 
@@ -17,6 +15,7 @@ echo "$(date) -- Generating file list"
 find ${bundle_dir} -type f > ${bundle_build_dir}/aws_bundle_list.txt
 rc=$?
 if [ ${rc} -ne 0 ]; then
+	rm -f ${bundle_build_dir}/aws_bundle_list.txt
 	exit 1
 fi
 
@@ -115,7 +114,7 @@ if [ ${rc} -ne 0 ]; then
 fi
 
 ## Ship encrypted bundle and manifest to AWS
-echo "$(date) -- Shipping encrypted data bundle and encrypted manifest to AWS Deep Glacider"
+echo "$(date) -- Shipping encrypted data bundle and encrypted manifest to AWS Deep Glacier"
 aws s3 cp ${bundle_build_dir}/${prefix}.tar.gpg s3://${aws_bucket}/ --storage-class DEEP_ARCHIVE
 rc=$?
 if [ ${rc} -ne 0 ]; then
