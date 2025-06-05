@@ -1516,7 +1516,7 @@
           "format": "table",
           "hide": false,
           "rawQuery": true,
-          "rawSql": "select count(bundle_number) as \"1000-5000\" from bundle_information where bundle_encrypted_size_bytes > 1000 and bundle_encrypted_size_bytes < 5000",
+          "rawSql": "select count(bundle_number) as \"1000-5000\" from bundle_information where bundle_files_contained > 1000 and bundle_files_contained < 5000",
           "refId": "D",
           "sql": {
             "columns": [
@@ -1673,6 +1673,6 @@
   "timezone": "browser",
   "title": "Storage - AWS Deep Glacier",
   "uid": "5594bafe-8735-4eba-af89-bd3af15754e8",
-  "version": 10,
+  "version": 11,
   "weekStart": ""
 }
